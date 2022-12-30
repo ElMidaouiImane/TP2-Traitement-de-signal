@@ -285,6 +285,7 @@ end
 %la gamme
 Gamme = [ A B C D E F G H ];
 sound(Gamme,fe)
+````
 
 ## Spectre de la gamme de musique
 2- Utilisez l’outil graphique d’analyse de signaux signalAnalyzer pour visualiser le spectre de votre gamme. Observez les 8 fréquences contenues dans la gamme et
