@@ -6,12 +6,12 @@ Synthèse et analyse spectrale d’une gamme de musique</h1>
 <summary>Table of Contents</summary>
   <ol>             
       <li><a href="#Objectifs">Objectifs</a></li>
-      <li><a href="#Jeux de mots">Jeux de mots</a></li> 
-      <li><a href="#Synthèse et analyse spectrale d’une gamme de musique">Synthèse et analyse spectrale d’une gamme de musique</a></li>
+      <li><a href="#Jeux-de-mots">Jeux de mots</a></li> 
+      <li><a href="#Synthèse-et-analyse-spectrale-d’une-gamme-de-musique">Synthèse et analyse spectrale d’une gamme de musique</a></li>
        <ul>
-         <li><a href="##Synthèse d’une gamme de musique">Synthèse d’une gamme de musique</a></li> 
-         <li><a href="##Spectre de la gamme de musique">Spectre de la gamme de musique</a></li>
-         <li><a href="##Approximation du spectre d'un signal sinusoïdal à temps continu par FFT">Approximation du spectre d’un signal sinusoïdal à temps continu par FFT</a></li>
+         <li><a href="##Synthèse-d’une-gamme-de-musique">Synthèse d’une gamme de musique</a></li> 
+         <li><a href="##Spectre-de-la-gamme-de-musique">Spectre de la gamme de musique</a></li>
+         <li><a href="##Approximation-du-spectre-d'un-signal-sinusoïdal-à-temps-continu-par-FFT">Approximation du spectre d’un signal sinusoïdal à temps continu par FFT</a></li>
        </ul>      
   </ol>
   
@@ -36,7 +36,7 @@ Synthèse et analyse spectrale d’une gamme de musique</h1>
 > commentaires sur ce que vous avez compris et pas compris, ou sur ce qui vous a
 > semblé intéressant ou pas, bref tout commentaire pertinent sur le TP.
 
-# Jeux de mots
+# Jeux-de-mots
 
 « phrase.wave » est un fichier audio enregistré à l’aide d’un smartphone, en prononçant lentement la phrase :<br/>
 
@@ -105,8 +105,8 @@ sound(partirapoint,f)
 vecteur = [riennesertde ; partirapoint ; ilfaut ; courir];
 sound(vecteur,f)
 ```
-# Synthèse et analyse spectrale d’une gamme de musique
- ## Synthèse d’une gamme de musique
+# Synthèse-et-analyse-spectrale-d’une-gamme-de-musique
+ ## Synthèse-d’une-gamme-de-musique
  Les notes de musique produites par un piano peuvent être synthétisées approximativement numériquement. En effet, chaque note peut être considérée comme étant un son pur produit par un signal sinusoïdal. La fréquence de la note « La » est par exemple de 440 Hz.
 
 1- Créez un programme qui permet de jouer une gamme de musique. La fréquence de chaque note est précisée dans le tableau ci-dessous. Chaque note aura une durée
@@ -287,7 +287,7 @@ Gamme = [ A B C D E F G H ];
 sound(Gamme,fe)
 ````
 
-## Spectre de la gamme de musique
+## Spectre-de-la-gamme-de-musique
 2- Utilisez l’outil graphique d’analyse de signaux signalAnalyzer pour visualiser le spectre de votre gamme. Observez les 8 fréquences contenues dans la gamme et
 vérifiez leur valeur numérique à l’aide des curseurs.
 
@@ -299,7 +299,7 @@ des fréquences n’est pas suffisante pour relever précisément les 8 fréquen
 
 ![spectrogram](https://user-images.githubusercontent.com/121026639/210112553-0f2f1a1d-6855-4550-8116-8ff8e857e30b.png)
 
-## Approximation du spectre d’un signal sinusoïdal à temps continu par FFT
+## Approximation-du-spectre-d'un-signal-sinusoïdal-à-temps-continu-par-FFT
 
 
 
