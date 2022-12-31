@@ -1,0 +1,239 @@
+clear all
+close all
+clc
+
+-------------------------------------------------
+                  Jeux de mots
+-------------------------------------------------  
+
+%%
+[a,f] = audioread("phrase.opus");
+
+%%
+ sound(a,f) %original audio
+ 
+%%
+sound(a,f*2) %Donald Duck
+
+%%
+sound(a,f*0.5) %Terminator
+
+%%
+N = length(a)
+ts = 1/f
+t = (0:N-1)*ts;
+plot(t,a)
+title('le signal enregistré')
+
+%%
+riennesertde = a(5055:170900);
+sound(riennesertde,f)
+plot(riennesertde);
+title('Rien ne sert de')
+
+%%
+courir = a(172456:250489);
+sound(courir,f)
+
+%%
+ilfaut = a(250000:334689);
+sound(ilfaut,f)
+
+%%
+partirapoint = a(334895:485984);
+sound(partirapoint,f)
+
+%%
+vecteur = [riennesertde ; partirapoint ; ilfaut ; courir];
+sound(vecteur,f)
+
+-------------------------------------------------
+    Synthèse et analyse spectrale d’une gamme
+                   de musique
+------------------------------------------------- 
+
+--------------Synthèse d’une gamme de musique---------------
+
+%%
+fe = 8192;
+te = 1/fe
+t = 0:te:1;
+do1 = sin(2*pi*262*t);
+re = sin(2*pi*249*t);
+mi = sin(2*pi*330*t);
+fa = sin(2*pi*349*t);
+sol = sin(2*pi*392*t);
+la = sin(2*pi*440*t);
+si = sin(2*pi*494*t);
+do2 = sin(2*pi*523*t);
+
+note1 = input('Donnez la premiére note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
+if note1 == 1
+    A = do1
+elseif note1 == 2
+    A = re
+elseif note1 == 3
+    A = mi
+elseif note1 == 4
+    A = fa
+elseif note1 == 5
+    A = sol
+elseif note1 == 6
+    A = la
+elseif note1 == 7
+    A = si
+elseif note1 == 8
+    A = do2
+end   
+
+note2 = input('Donnez la deuxième note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
+if note2 == 1
+    B = do1
+elseif note2 == 2
+    B = re
+elseif note2 == 3
+    B = mi
+elseif note2 == 4
+    B = fa
+elseif note2 == 5
+    B = sol
+elseif note2 == 6
+    B = la
+elseif note2 == 7
+    B = si
+elseif note2 == 8
+    B = do2
+end   
+
+note3 = input('Donnez la troisième note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
+if note3 == 1
+    C = do1
+elseif note3 == 2
+    C = re
+elseif note3 == 3
+    C = mi
+elseif note3 == 4
+    C = fa
+elseif note3 == 5
+    C = sol
+elseif note3 == 6
+    C = la
+elseif note3 == 7
+    C = si
+elseif note3 == 8
+    C = do2
+end   
+
+note4 = input('Donnez la quatrième note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
+if note4 == 1
+    D = do1
+elseif note4 == 2
+    D = re
+elseif note4 == 3
+    D = mi
+elseif note4 == 4
+    D = fa
+elseif note4 == 5
+    D = sol
+elseif note4 == 6
+    D = la
+elseif note4 == 7
+    D = si
+elseif note4 == 8
+    D = do2
+end   
+
+note5 = input('Donnez la cinquième note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
+if note5 == 1
+    E = do1
+elseif note5 == 2
+    E = re
+elseif note5 == 3
+    E = mi
+elseif note5 == 4
+    E = fa
+elseif note5 == 5
+    E = sol
+elseif note5 == 6
+    E = la
+elseif note5 == 7
+    E = si
+elseif note5 == 8
+    E = do2
+end   
+
+note6 = input('Donnez la sixième note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
+if note6 == 1
+    F = do1
+elseif note6 == 2
+    F = re
+elseif note6 == 3
+    F = mi
+elseif note6 == 4
+    F = fa
+elseif note6 == 5
+    F = sol
+elseif note6 == 6
+    F = la
+elseif note6 == 7
+    F = si
+elseif note6 == 8
+    F = do2
+end   
+
+note7 = input('Donnez la septième note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
+if note7 == 1
+    G = do1
+elseif note7 == 2
+    G = re
+elseif note7 == 3
+    G = mi
+elseif note7 == 4
+    G = fa
+elseif note7 == 5
+    G = sol
+elseif note7 == 6
+    G = la
+elseif note7 == 7
+    G = si
+elseif note7 == 8
+    G = do2
+end   
+% 8 note
+note8 = input('Donnez la huitième note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
+if note8 == 1
+    H = do1
+elseif note8 == 2
+    H = re
+elseif note8 == 3
+    H = mi
+elseif note8 == 4
+    H = fa
+elseif note8 == 5
+    H = sol
+elseif note8 == 6
+    H = la
+elseif note8 == 7
+    H = si
+elseif note8 == 8
+    H = do2
+end  
+%la gamme
+Gamme = [ A B C D E F G H ];
+sound(Gamme,fe)
+
+--------------Approximation du spectre d’un signal sinusoïdal à temps continu par FFT---------------
+%%
+% spectre en échelle linéaire
+
+N = length(Gamme);
+fshift = (-N/2:N/2-1)*(fe/N);
+plot(fshift,fftshift(2*abs(fft(Gamme))/N));
+title('spectre en échelle linéaire');
+
+%%
+% spectre avec une échelle en décibels
+
+plot(fshift,20*log10(fftshift(2*abs(fft(Gamme))/N)));
+title('spectre avec une échelle en décibels');
+
