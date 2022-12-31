@@ -58,6 +58,7 @@ sound(vecteur,f)
 fe = 8192;
 te = 1/fe
 t = 0:te:1;
+
 do1 = sin(2*pi*262*t);
 re = sin(2*pi*249*t);
 mi = sin(2*pi*330*t);
@@ -67,6 +68,7 @@ la = sin(2*pi*440*t);
 si = sin(2*pi*494*t);
 do2 = sin(2*pi*523*t);
 
+% 1 note
 note1 = input('Donnez la premiére note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
 if note1 == 1
     A = do1
@@ -85,7 +87,7 @@ elseif note1 == 7
 elseif note1 == 8
     A = do2
 end   
-
+% 2 note
 note2 = input('Donnez la deuxième note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
 if note2 == 1
     B = do1
@@ -104,7 +106,7 @@ elseif note2 == 7
 elseif note2 == 8
     B = do2
 end   
-
+% 3 note
 note3 = input('Donnez la troisième note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
 if note3 == 1
     C = do1
@@ -123,7 +125,7 @@ elseif note3 == 7
 elseif note3 == 8
     C = do2
 end   
-
+% 4 note
 note4 = input('Donnez la quatrième note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
 if note4 == 1
     D = do1
@@ -142,7 +144,7 @@ elseif note4 == 7
 elseif note4 == 8
     D = do2
 end   
-
+% 5 note
 note5 = input('Donnez la cinquième note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
 if note5 == 1
     E = do1
@@ -161,7 +163,7 @@ elseif note5 == 7
 elseif note5 == 8
     E = do2
 end   
-
+% 6 note
 note6 = input('Donnez la sixième note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
 if note6 == 1
     F = do1
@@ -180,7 +182,7 @@ elseif note6 == 7
 elseif note6 == 8
     F = do2
 end   
-
+% 7 note
 note7 = input('Donnez la septième note : \n 1:DO \n 2:RE \n 3:MI \n 4:FA \n 5:SOL \n 6:LA \n 7:SI \n 8:DO(2) \n');
 if note7 == 1
     G = do1
@@ -217,7 +219,8 @@ elseif note8 == 7
     H = si
 elseif note8 == 8
     H = do2
-end  
+end 
+
 %la gamme
 Gamme = [ A B C D E F G H ];
 sound(Gamme,fe)
