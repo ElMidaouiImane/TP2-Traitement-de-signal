@@ -7,7 +7,7 @@ Synthèse et analyse spectrale d’une gamme de musique</h1>
   <ol>             
       <li><a href="#Objectifs">Objectifs</a></li>
       <li><a href="#Jeux-de-mots">Jeux de mots</a></li> 
-      <li><a href="#Synthèse-et-analyse-spectrale-d’une-gamme-de-musique">Synthèse et analyse spectrale d’une gamme de musique</a></li>
+      <li><a href="#Synthèse-et-analyse-spectrale-d’une-gamme-de-musique">Synthèse-et-analyse-spectrale-d’une-gamme-de-musique</a></li>
        <ul>
          <li><a href="##Synthèse-d’une-gamme-de-musique">Synthèse d’une gamme de musique</a></li> 
          <li><a href="##Spectre-de-la-gamme-de-musique">Spectre de la gamme de musique</a></li>
