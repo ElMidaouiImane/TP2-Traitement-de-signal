@@ -300,7 +300,32 @@ des fréquences n’est pas suffisante pour relever précisément les 8 fréquen
 ![spectrogram](https://user-images.githubusercontent.com/121026639/210112553-0f2f1a1d-6855-4550-8116-8ff8e857e30b.png)
 
 ## Approximation-du-spectre-d'un-signal-sinusoïdal-à-temps-continu-par-FFT
+4- Le spectre d’un signal à temps continu peut être approché par transformée de Fourier discrète (TFD) ou sa version rapide (Fast Fourier Transform (FFT). Afficher le
+spectre de fréquence de la gamme musicale crée en échelle linéaire, puis avec une échelle en décibels. 
 
+> S(dB) =20×log₁₀|S(f)|  
 
+##### spectre de fréquence en échelle linéaire
+
+```matlab
+N = length(Gamme);
+fshift = (-N/2:N/2-1)*(fe/N);
+plot(fshift,fftshift(2*abs(fft(Gamme))/N));
+title('spectre en échelle linéaire');
+```
+
+![linéaire](https://user-images.githubusercontent.com/121026639/210138445-ade79389-0ce8-4499-aed4-3510c1b1dd17.png)
+
+##### spectre de fréquence avec une échelle en décibels
+
+```matlab
+plot(fshift,20*log10(fftshift(2*abs(fft(Gamme))/N)));
+title('spectre avec une échelle en décibels');
+```
+![décibels](https://user-images.githubusercontent.com/121026639/210138499-2e6ecc48-f357-44ac-b175-6a60f8676038.png)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<h4> Réalisé par : EL MIDAOUI Imane  </h4> <br/> 
+ > Encadré par  : [Pr. AMMOUR Alae]
 
 
